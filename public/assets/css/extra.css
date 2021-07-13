@@ -1,0 +1,6 @@
+.form-control:disabled, .form-control[readonly] {
+    cursor: not-allowed!important;
+}
+table {
+    text-align: center;
+}
