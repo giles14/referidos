@@ -120,6 +120,34 @@ class TransactionController extends Controller
         //}
     }
 
+    private function randomCode( $lenght = 5 ) {
+
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+
+        }
+
+        return $randomString;
+
+    }
+
+    public function storeApi($information = ''){
+
+        $lead_id =;
+        $descuento_activo_id =;
+        $codigo_referido_id = ;
+        $folio = randomCode(5);
+
+        echo 'Intentando salvar';
+
+        return $folio;
+
+    }
+
     /**
      * Display the specified resource.
      *

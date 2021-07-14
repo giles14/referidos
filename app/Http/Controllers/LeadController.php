@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lead;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
@@ -73,8 +74,6 @@ class LeadController extends Controller
         // return response()-> json($result,200);
 
 
-        
-
         try{
             $request -> validate([
                 'nombre' => 'required',
@@ -94,6 +93,7 @@ class LeadController extends Controller
 
             $result[] = ['saved' => false,
             'reason' => 'No se llenaron todos los campos o no son válidos',
+            'requestVar' => $request->all(),
             'fields'=> [$request['nombre'] , $request['correo'], $request['telefono'] , $request['codigo'], $request['programa']]
         ];
             return response()-> json($result);
