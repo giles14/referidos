@@ -137,9 +137,9 @@ class TransactionController extends Controller
 
     public function storeApi($information = ''){
 
-        $lead_id =;
-        $descuento_activo_id =;
-        $codigo_referido_id = ;
+        $lead_id = '';
+        $descuento_activo_id = '';
+        $codigo_referido_id =  '';
         $folio = randomCode(5);
 
         echo 'Intentando salvar';
