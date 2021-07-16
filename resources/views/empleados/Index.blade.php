@@ -58,6 +58,6 @@
         @endforeach
     </table>
 
-    {!! $empleados->links() !!}
+    {{-- {!! $empleados->links() !!} --}}
 
 @endsection

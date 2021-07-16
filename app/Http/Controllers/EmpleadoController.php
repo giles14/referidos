@@ -16,7 +16,8 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $empleados = Empleado::latest()->paginate(5);
+        //$empleados = Empleado::latest()->paginate(5);
+        $empleados= Empleado::all();
 
         return view('empleados.index' , compact('empleados'))->with('i', (request()->input('page' , 1) - 1) * 5);
     }

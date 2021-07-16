@@ -49,15 +49,15 @@
       </nav>
       <div class="container-fluid">
         <div class="row">
-            <div class="col-4 offset-md-7 mt-5">
-                <img src="assets/img/texto_es_momento.png" alt="">
+            <div class="col-lg-4 col-md-4 col-6 offset-6 offset-md-7 mt-5">
+                <img class="img-fluid" src="assets/img/texto_es_momento.png" alt="">
             </div>     
 
         </div>
       </div>
       <div class="container">
         <div class="row">
-            <div class="col-12 mt-5 extra-buffer tarjeta">
+            <div class="col-12 mt-5 extra-buffer tarjeta d-none d-lg-block">
                 
                 <div class="container datos">
                     <form id="lead" method="POST" action="">
@@ -106,11 +106,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-5 mt-2 offset-1 zona-premio">
+                        <div class="col-md-6 mt-2 offset-1 zona-premio">
                             <p class="monto">Monto Asignado:</p>
                             <p class="premio">$2,340.00 <span>MN/MX*</span></p>
                         </div>
-                        <div class="col-6 mt-2">
+                        <div class="col-md-5 mt-2">
                             <button id="lead" type="button" class="btn btn-primary btn-sm el-boton">Enviar y canjear</button>
                         </div>
                     </div>
@@ -122,56 +122,109 @@
 
         </div>
       </div>
-
+      <div class="container d-lg-none d-gd-none">
+          <div class="row">
+              <div class="col tarjeta-bg">
+                  <h1 class="tarjeta-regalo">TARJETA DE REGALO</h1>
+                <p class="felicidades">¡Felicidades acabas de desbloquear las barreras hacia TU éxito profesional! Regístrate para hacer válido el monto asignado a esta tarjeta de regalo y canjéalos para tu nuevo ingreso a la Licenciatura en Seguridad Pública.</p>
+                <form id="lead-mo">
+                    <div class="form-group">
+                        <input type="text" name="nombre" class="form-control" id="nombre_mo" placeholder="Nombre completo">
+                      </div>
+                    <div class="form-group">
+                      <input type="email" name="correo" class="form-control" id="email_mo" placeholder="Correo electrónico">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" name="codigo_promocion" class="form-control" id="codigo_promo_mo" placeholder="Codigo promo" readonly>
+                              </div>  
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="tel" name="telefono" class="form-control" id="tel_mo" placeholder="Celular" readonly>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="programa" class="form-control" id="programa_mo" placeholder="Programa" readonly>
+                      </div>
+                      <div class="row banda no-gutters">
+                          <div class="col-6 no-gutters">
+                            <p class="previo ">Monto asignado:</p>
+                            <p class="premio">$2,340.00<span>MN/MX*</span></p>
+                          </div>
+                          <div class="col-6 no-gutters">
+                                <button id="lead_mo" type="button" class="btn btn-primary btn-sm el-boton">Enviar y canjear</button>
+                          </div>
+                          
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <img class="center mx-auto d-block" src="assets/img/logo-tarjeta.png" alt="">
+                        </div>
+                    </div>
+                      
+                      
+                  </form>
+                
+              </div>
+              <div class="row">
+                <div class="col">
+                    <p class="disclaimer">Válido únicamente para inscritos de nuevo en la Licenciatura en Seguridad Pública. El monto asignado por $2,340 aplica únicamente para el pago de colegiaturas y sobre el precio de lista base, el cual, se mantendrá vigente durante todo el programa. Se interrumpirá el beneficio únicamente si se presenta adeudo o atraso de pago. El monto a pagar en colegiaturas tiene un incremento del 5% anual. No aplica con otras promociones, descuentos o beneficios y se encuentra sujeto a cambio sin previo aviso.</p>
+                </div>
+            </div>
+          </div>
+      </div>
 
     </div>
     <section id="licenciatura">
         <div class="container">
             <div class="row">
-                <div class="col-6 mt-9">
+                <div class="col-md-6 mt-9">
                     <h1 class="nombre-licenciatura">LICENCIATURA EN LÍNEA SEGURIDAD PUBLICA</h1>
                 </div>
             </div>
             <div class="row mt-5" >
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="row first" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="col-sm-1">
+                        <div class="col-2 col-sm-1">
                         <img src="assets/img/checkbox.png"  alt="">
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-10 col-sm-10">
                             <p class="principal">Título y cédula profesional con validez oficial</p>
                             <p class="info">R.V.O.E. SEP-SES 21/114/01/2042/2017.</p>
                         </div>
                     </div>
                     <div class="row" data-aos="fade-up" data-aos-duration="1000"> 
-                        <div class="col-sm-1">
+                        <div class="col-2 col-sm-1">
                             <img src="assets/img/checkbox.png"  alt="">
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-10 col-sm-10">
                             <p class="principal">Atención y seguimiento excepcional</p>
                             <p class="info">Lo puedes comprobar, ninguna otra institución de educación en línea te atenderá como nosotros.</p>
                         </div>
                     </div>
                     <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="col-sm-1">
+                        <div class="col-2 col-sm-1">
                             <img src="assets/img/checkbox.png"  alt="">
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-10 col-sm-10">
                             <p class="principal">Nosotros vamos contigo</p>
                             <p class="info">Podrás estudiar totalmente en línea, en donde tú quieras y cuando tú quieras, las 24 horas, los 7 días. No irás a la escuela, la escuela ira contigo.</p>
                         </div>
                     </div>
                     <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="col-sm-1">
+                        <div class="col-2 col-sm-1">
                             <img src="assets/img/checkbox.png" alt="">
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-10 col-sm-10">
                             <p class="principal">Descarga nuestro plan de estudios</p>
                             <p class="info">Aprenderás herramientas prácticas que podrás utilizar de inmediato en tu vida laboral.</p>
                         </div>    
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="row">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/qSnbNZpD0tQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -193,7 +246,7 @@
                     <div class="col">
                         <img src="assets/img/Logo-IEXE_full.svg" alt="">
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm d-none d-sm-block">
                         <ul class="menu-inferior">
                             <li class="titulo">Adminisiones</li>
                             <li><a href="https://www.iexe.edu.mx/becas-2">Becas</a></li>
@@ -202,14 +255,14 @@
                             <li><a href="https://www.iexe.edu.mx/politica-privacidad">Política de privacidad</a></li>
                         </ul>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm d-none d-sm-block">
                         <ul>
                             <li class="titulo">Acerca de IEXE</li>
                             <li><a href="https://www.iexe.edu.mx/editorial">IEXE editorial</a></li>
                             <li><a href="https://www.iexe.edu.mx/investigacion">Investigación IEXE</a></li>
                         </ul>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm d-none d-sm-block">
                         <ul>
                             <li class="titulo">Contacto</li>
                             <li><a href="https://goo.gl/maps/nFaq551U71P4vRsNA">Blvd. Esteban de Antuñano # 2702 ciudad de Puebla C.P 72160</a></li>
@@ -219,8 +272,8 @@
                     </div>
                 </div>
                 <div class="row social">
-                    <div class="col-9"></div>
-                    <div class="col-3">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
                         <ul class="social_link">
                             <li><a class="facebook hasTooltip" href="https://www.facebook.com/IEXE.Universidad" target="" rel="noopener"><i class="fa fa-facebook"></i></a></li><li><a class="twitter hasTooltip" href="https://twitter.com/IEXE_Uni" target="" rel="noopener"><i class="fa fa-twitter"></i></a></li><li><a class="linkedin hasTooltip" href="https://www.linkedin.com/company/iexe-escuela-de-pol-ticas-p-blicas/" target="" rel="noopener"><i class="fa fa-linkedin"></i></a></li><li><a class="instagram hasTooltip" href="https://www.instagram.com/iexe_universidad/" target="" rel="noopener"><i class="fa fa-instagram"></i></a></li><li><a class="youtube hasTooltip" href="https://www.youtube.com/channel/UCrpLCwD_H0N-3l0nhhHJyYg" target="" rel="noopener"><i class="fa fa-youtube"></i></a></li>
                         </ul>
@@ -282,6 +335,11 @@
         .navbar {
             height: 16vh;
             width: 100%;
+        }
+        @media screen and (max-width: 600px) {
+            .navbar{
+                height: 13vh;
+            }
         }
         .box{
             height: 100vh;
@@ -405,6 +463,18 @@
             bottom: 0px;
             left: 15px;
         }
+        @media screen and (max-width: 600px) {
+            h1.nombre-licenciatura {
+            font-size: 26px;
+            line-height: 40px;
+            }
+            p.principal{
+                font-size: 14px;
+            }
+            p.info{
+                font-size: 14px
+            }
+        }
         p.principal {
             font-weight: bold;
             font-size: 19px;
@@ -422,6 +492,24 @@
             margin-top: -5px;
             margin-left: 10px;
         }
+        @media screen and (max-width: 600px) {
+            h1.nombre-licenciatura {
+            font-size: 26px;
+            line-height: 40px;
+            }
+            p.principal{
+                font-size: 14px;
+            }
+            p.info{
+                font-size: 14px
+            }
+        }
+         @media screen and (max-width: 1200px){
+            .container.datos{
+                top: 105px;
+            }
+         }
+
         #licenciatura .row {
             margin-bottom: 10px;
         }
@@ -494,7 +582,7 @@
         }
         @media screen and (min-width: 1500px) {
         .box {
-            background-size: cover;
+            background-size: contain;
             }
         }
         .valid-feedback.feedback-icon,
@@ -541,6 +629,88 @@
             display: inline-block;
             margin-top: 25px;
         }
+        @media only screen and (max-width: 600px) {
+            .box {
+                background-size: contain;
+                background-position-y: 13vh;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            nav.navbar.bg-purple {
+                background: linear-gradient( 
+            83deg
+            , rgba(41,188,206,1) 0%, rgba(27,85,162,1) 21%);
+                background-blend-mode: revert;
+            }
+        }
+        @media only screen and (max-width: 1350px) {
+            .box {
+                background-size: contain;
+                background-position-y: 13vh;
+            }
+        }
+
+
+        p.previo {
+            position: absolute;
+            top: -30px;
+            color: #fff;
+            padding-left: 7px;
+        }
+        .row.banda {
+            background:rgba(157, 176, 185, 0.86);
+            height: 45px;
+            margin: 46px -15px;
+            margin-bottom: 15px;
+        }
+        h1.tarjeta-regalo {
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto';
+            font-size: 18px;
+            margin-top: 13px;
+            font-weight: 600px
+        }
+        #lead-mo button.el-boton {
+            padding: 0px;
+            border-radius: 35px;
+            padding-right: 34px;
+            padding-left: 34px;
+            border: none;
+            background: #B7DCE4;
+            color: #368DAF;
+            margin-top: 7px;
+            font: normal normal normal 12px/32px Roboto;
+            font-weight: 600;
+        }
+        #lead-mo p.premio {
+            font-size: 22px;
+            margin-top: 8px;
+            padding-left: 7px;
+        }
+        #lead-mo .premio span{
+            font-size: 9px;
+        }
+        p.felicidades {
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+            font-family: 'Roboto';
+        }
+        p.disclaimer {
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+            font-family: 'Roboto';
+            font-weight: 300;
+            padding: 0 25px;
+            line-height: 17px;
+
+        }
+        img.center.mx-auto.d-block {
+            margin-bottom: 15px;
+        }
+        
         input:-webkit-autofill,
         input:-webkit-autofill:hover, 
         input:-webkit-autofill:focus, 
@@ -548,7 +718,46 @@
         {
         -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2) inset !important;
         }
+        .col.tarjeta-bg {
+            background: linear-gradient(
+        323deg
+        , rgba(58,104,139,1) 0%, rgba(59,106,140,1) 100%, rgba(126,174,189,1) 100%);
+            border-radius: 40px;
+            margin: 15px;
+        }
+        @media screen and (max-width: 700px) {
+            col.tarjeta-bg {
+                border-radius: 8px;
+            }
+        }
+        @media screen and (max-width: 1319px) {
+            button.el-boton {
+                margin-top: 40px;
+            }
+            p.monto{
+                margin-top: 0px;
+            }
 
+        }
+
+        @media only screen and (max-width: 1486px) {
+            .navbar {
+                height: 13vh;
+            }
+        }
+        
+        @media only screen and (max-width: 990px) {
+            div#navbarNav {
+                background: #1B55A2;
+                padding: 15px;
+                /* text-align: center; */
+                z-index: 99;
+            }
+            .navbar-collapse a.nav-link {
+            border-bottom: 1px solid;
+            margin-bottom: 11px;
+        }
+        }
     </style>
         <!-- Optional JavaScript; choose one of the two! -->
 
