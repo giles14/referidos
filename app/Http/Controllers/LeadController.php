@@ -88,6 +88,7 @@ class LeadController extends Controller
             'requestVar'=> $request->all(),
             'fields'=> [$request['nombre'] , $request['correo'], $request['telefono'] , $request['programa'] ,  $request['codigo']]
         ];
+        $this->pushCrm($result);
 
         }catch (\Illuminate\Validation\ValidationException $e) {
 
@@ -151,5 +152,41 @@ class LeadController extends Controller
         $lead -> delete();
 
         return redirect() -> route('leads.index') -> with('success' , 'Lead borrado con éxito');
+    }
+    /**
+     * It sends the received data (from storeApi) to push it to an External CRM
+     * 
+     * receive: leadInformation data
+     * @return \Illuminate\Http\Response
+     */
+    public function pushCrm( $leadInfo ){
+
+        // Sobre escribe la carrera LSP temporalmente.
+        //TODO: Cambiar LSP a la lista de carreras permitidas.
+        $leadInfo[0]['fields'][3] = 'LSP';
+
+        $url = 'https://api.redisoft.dev/Leads/web';
+        $data = array('nombre' => $leadInfo[0]['fields'][0], 'correo' => $leadInfo[0]['fields'][1] , 'telefono' => $leadInfo[0]['fields'][2], 'programa' => $leadInfo[0]['fields'][3] , 'referencia' => 'https://www.iexe.edu.mx/administracion-de-empresas#FormularioPrograma' , 'adicional' => 'landing Page');
+        //$data = 'nombre=Nombre de prueba&correo=miCorreodePrueba7@gmail.com&telefono=+522226558877&programa=LAE&referencia=https://www.iexe.edu.mx/administracion-de-empresas#FormularioPrograma&adicional=landing merca';
+
+         //$data2 = http_build_query($data);
+         //$myData = urldecode($data2);
+        // echo $myData;
+
+        $options = array(
+            'http' => array(
+                'header'  => "Content-type: application/x-www-form-urlencoded",
+                'method'  => 'POST',
+                'content' => http_build_query($data)
+
+            )
+        );
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        echo $result;
+        if ($result === FALSE) { 
+            echo 'CRM regreso un valor no reconocido';
+         }
+
     }
 }

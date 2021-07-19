@@ -852,7 +852,7 @@
 
     </script>
     <script>
-        var input = document.querySelector("#phone , #tel_mo");
+        var input = document.querySelector("#phone");
         var iti = window.intlTelInput(input, {
           // allowDropdown: false,
           // autoHideDialCode: false,
@@ -879,8 +879,8 @@
 
     </script>
         <script>
-            var input = document.querySelector("#tel_mo");
-            var iti = window.intlTelInput(input, {
+            var inputmo = document.querySelector("#tel_mo");
+            var itin = window.intlTelInput(inputmo, {
               // allowDropdown: false,
               // autoHideDialCode: false,
               // autoPlaceholder: "off",
@@ -893,7 +893,6 @@
                   callback(countryCode);
                 });
               },
-              hiddenInput: "telefone",
               initialCountry: "auto",
               // localizedCountries: { 'de': 'Deutschland' },
               // nationalMode: false,
@@ -913,7 +912,7 @@
                 var formData = new FormData(forma);
             	formData.append('telefono', String(iti.getNumber(crossOriginIsolated)));
                 $.ajax({
-                url: 'http://143.110.230.150/api/lead',
+                url: 'http://referidos.test/api/lead',
                 type: 'POST',
                 dataType: 'json',
                 processData: false,
@@ -978,7 +977,7 @@
             $('button#lead_mo').click(function(){                
                 var leade = document.getElementById('lead-mo');
                 var formData = new FormData(leade);
-            	formData.append('telefono', String(iti.getNumber(crossOriginIsolated)));
+            	formData.append('telefono', String(itin.getNumber(crossOriginIsolated)));
                 $.ajax({
                 url: 'http://143.110.230.150/api/lead',
                 type: 'POST',
