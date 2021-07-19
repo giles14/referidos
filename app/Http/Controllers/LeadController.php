@@ -86,7 +86,7 @@ class LeadController extends Controller
             Lead::create($request->all());
             $result[] = ['saved' => true,
             'requestVar'=> $request->all(),
-            'fields'=> [$request['nombre'] , $request['correo'], $request['telefono'] , $request['telefone']]
+            'fields'=> [$request['nombre'] , $request['correo'], $request['telefono'] , $request['programa'] ,  $request['codigo']]
         ];
 
         }catch (\Illuminate\Validation\ValidationException $e) {

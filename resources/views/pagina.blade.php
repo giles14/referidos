@@ -49,8 +49,8 @@
       </nav>
       <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-6 offset-6 offset-md-7 mt-5">
-                <img class="img-fluid" src="assets/img/texto_es_momento.png" alt="">
+            <div class="col-lg-4 col-md-4 col-7 offset-5 offset-md-7 mt-5">
+                <img style="margin-left: -15px" class="img-fluid" src="assets/img/texto_es_momento.png" alt="">
             </div>     
 
         </div>
@@ -128,29 +128,45 @@
                   <h1 class="tarjeta-regalo">TARJETA DE REGALO</h1>
                 <p class="felicidades">¡Felicidades acabas de desbloquear las barreras hacia TU éxito profesional! Regístrate para hacer válido el monto asignado a esta tarjeta de regalo y canjéalos para tu nuevo ingreso a la Licenciatura en Seguridad Pública.</p>
                 <form id="lead-mo">
-                    <div class="form-group">
-                        <input type="text" name="nombre" class="form-control" id="nombre_mo" placeholder="Nombre completo">
-                      </div>
-                    <div class="form-group">
-                      <input type="email" name="correo" class="form-control" id="email_mo" placeholder="Correo electrónico">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" name="nombre" class="form-control" id="nombre_mo" placeholder="Nombre completo" minlength="3" required>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
-                                <input type="text" name="codigo_promocion" class="form-control" id="codigo_promo_mo" placeholder="Codigo promo" readonly>
-                              </div>  
+                                <input type="email" name="correo" class="form-control" id="email_mo" placeholder="Correo electrónico" minlength="3" required>
+                            </div>
                         </div>
-                        <div class="col">
+                        
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5">
                             <div class="form-group">
-                                <input type="tel" name="telefono" class="form-control" id="tel_mo" placeholder="Celular" readonly>
+                                <input type="text" name="codigo" value="LSP0721" class="form-control" id="codigo_promo_mo" placeholder="Codigo promo" readonly>
+                            </div>  
+                            
+                        </div>
+                        <div class="col-7">
+                            <div class="form-group">
+                                <input type="tel" name="telefono" class="form-control" id="tel_mo" placeholder="Celular">
                               </div>
+                              
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="programa" class="form-control" id="programa_mo" placeholder="Programa" readonly>
-                      </div>
-                      <div class="row banda no-gutters">
-                          <div class="col-6 no-gutters">
+                        <input type="text" name="programa" value="Programa: Lic. Seguridad Pública"  class="form-control" id="programa_mo" placeholder="Programa" readonly>
+                    </div>
+                    <div class="valid-feedback feedback-icon">
+                        <i class="fa fa-check"></i>
+                    </div>
+                      <div class="row banda">
+                          <div class="col-6">
                             <p class="previo ">Monto asignado:</p>
                             <p class="premio">$2,340.00<span>MN/MX*</span></p>
                           </div>
@@ -224,13 +240,16 @@
                         </div>    
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 mt-3">
                     <div class="row">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/qSnbNZpD0tQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="row">
                         <div class="col float-right mt-3">
-                            <img class="logos float-right" src="assets/img/SEP_logo.png" alt=""><img class="logos float-right mar" src="assets/img/progama_en_linea.svg" alt=""><img class="logos float-right mar" src="assets/img/RVOE.png" alt="">
+                            <div class="contenedor-img">
+                                <img class="logos float-right" src="assets/img/SEP_logo.png" alt=""><img class="logos float-right mar" src="assets/img/progama_en_linea.svg" alt=""><img class="logos float-right mar" src="assets/img/RVOE.png" alt="">
+                            </div>
+                            
                         </div>
                     </div>
                     
@@ -262,7 +281,7 @@
                             <li><a href="https://www.iexe.edu.mx/investigacion">Investigación IEXE</a></li>
                         </ul>
                     </div>
-                    <div class="col-12 col-sm d-none d-sm-block">
+                    <div class="col-12 col-sm mt-8">
                         <ul>
                             <li class="titulo">Contacto</li>
                             <li><a href="https://goo.gl/maps/nFaq551U71P4vRsNA">Blvd. Esteban de Antuñano # 2702 ciudad de Puebla C.P 72160</a></li>
@@ -272,8 +291,8 @@
                     </div>
                 </div>
                 <div class="row social">
-                    <div class="col-md-8"></div>
-                    <div class="col-md-4">
+                    <div class="col-0 col-md-8"></div>
+                    <div class="col-12 col-md-4 mp">
                         <ul class="social_link">
                             <li><a class="facebook hasTooltip" href="https://www.facebook.com/IEXE.Universidad" target="" rel="noopener"><i class="fa fa-facebook"></i></a></li><li><a class="twitter hasTooltip" href="https://twitter.com/IEXE_Uni" target="" rel="noopener"><i class="fa fa-twitter"></i></a></li><li><a class="linkedin hasTooltip" href="https://www.linkedin.com/company/iexe-escuela-de-pol-ticas-p-blicas/" target="" rel="noopener"><i class="fa fa-linkedin"></i></a></li><li><a class="instagram hasTooltip" href="https://www.instagram.com/iexe_universidad/" target="" rel="noopener"><i class="fa fa-instagram"></i></a></li><li><a class="youtube hasTooltip" href="https://www.youtube.com/channel/UCrpLCwD_H0N-3l0nhhHJyYg" target="" rel="noopener"><i class="fa fa-youtube"></i></a></li>
                         </ul>
@@ -341,12 +360,13 @@
                 height: 13vh;
             }
         }
+        
         .box{
             height: 100vh;
             width: 100%;
             display: table;
             background-size: auto ;
-            background-image: url(assets/img/hombreBg.png) , linear-gradient(to top, #264862 0%, #9DB0B9 24%);
+            background-image: url(assets/img/hombreBg.png) , linear-gradient(to bottom, #9DB0B9 0%, #264862 24%);
             background-repeat: no-repeat;
         }
         nav.navbar.bg-purple {
@@ -563,7 +583,7 @@
             color: #fff;
         }
         .mt-9{
-            margin-top: 6em!important;
+            margin-top: 6em;
         }
         button.boton-top {
             border: none;
@@ -674,8 +694,8 @@
         #lead-mo button.el-boton {
             padding: 0px;
             border-radius: 35px;
-            padding-right: 34px;
-            padding-left: 34px;
+            padding-right: 20px;
+            padding-left: 20px;
             border: none;
             background: #B7DCE4;
             color: #368DAF;
@@ -725,11 +745,32 @@
             border-radius: 40px;
             margin: 15px;
         }
-        @media screen and (max-width: 700px) {
-            col.tarjeta-bg {
+        @media only screen and (max-width: 600px) {
+            .col.tarjeta-bg {
                 border-radius: 8px;
             }
+            img.logos.float-right.mar {
+                margin-right: 20px;
+            }
+            .contenedor-img .float-right{
+                float:unset!important;
+                margin-left: 20px;
+            }
         }
+        .contenedor-img {
+            width: 100%;
+            text-align: center;
+        }
+        ul.social_link {
+            width: 250px;
+        }
+        @media screen and (min-width: 605px) {
+        .mp{
+            text-align: -webkit-right;
+        }
+
+        }
+        
         @media screen and (max-width: 1319px) {
             button.el-boton {
                 margin-top: 40px;
@@ -756,7 +797,32 @@
             .navbar-collapse a.nav-link {
             border-bottom: 1px solid;
             margin-bottom: 11px;
+            }
+            .col.tarjeta-bg {
+                border-radius: 8px;
+            }
         }
+        @media screen and (max-width: 600px) {
+            .box{
+                background-image: url(assets/img/yaesviernes.png) , linear-gradient(to bottom, #9DB0B9 0%, #264862 24%);
+                background-size: contain;
+            }
+            .mt-9{
+                margin-top: 2em;
+            }
+            .mt-8{
+                margin-top: 2em;
+            }
+            ul.social_link {
+                margin: 0 auto;
+            }
+            .iti{
+                margin-top: 0px;
+            }
+            .form-control.is-valid {
+                /* background: #000!important; */
+                color: green!important;
+            }
         }
     </style>
         <!-- Optional JavaScript; choose one of the two! -->
@@ -786,7 +852,7 @@
 
     </script>
     <script>
-        var input = document.querySelector("#phone");
+        var input = document.querySelector("#phone , #tel_mo");
         var iti = window.intlTelInput(input, {
           // allowDropdown: false,
           // autoHideDialCode: false,
@@ -811,10 +877,36 @@
           utilsScript: "assets/js/utils.js",
         });
 
-      </script>
+    </script>
+        <script>
+            var input = document.querySelector("#tel_mo");
+            var iti = window.intlTelInput(input, {
+              // allowDropdown: false,
+              // autoHideDialCode: false,
+              // autoPlaceholder: "off",
+              // dropdownContainer: document.body,
+              // excludeCountries: ["us"],
+              // formatOnDisplay: false,
+              geoIpLookup: function(callback) {
+                $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                  var countryCode = (resp && resp.country) ? resp.country : "";
+                  callback(countryCode);
+                });
+              },
+              hiddenInput: "telefone",
+              initialCountry: "auto",
+              // localizedCountries: { 'de': 'Deutschland' },
+              // nationalMode: false,
+              // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+              // placeholderNumberType: "MOBILE",
+              preferredCountries: ['mx' , 'ec', 'co', 'us', 'ar' , 'pa' , 'do'],
+              // separateDialCode: true,
+              utilsScript: "assets/js/utils.js",
+            });
+    
+          </script>
     <script>
         $(document).ready(function(){
-            
 
             $('button#lead').click(function(){                
                 var forma = document.getElementById('lead');
@@ -858,6 +950,73 @@
     <script>
         $(document).ready(function() {
               $("#lead").validate({
+                  debug: true,
+                  rules: {
+                      nombre : "required",
+                      apellido: "required",
+                      email: "required"
+                  },
+                  messages: {
+                  nombre: {
+                      required: "Por favor rellene su nombre",
+                      minlength: jQuery.validator.format("Se requieren al menos {0} letras")
+                      },
+                      correo: {
+                      required: "Por favor rellene su correo electrónico",
+                      minlength: jQuery.validator.format("Se requieren al menos {0} letras")
+                      }
+                  
+                  },
+                  
+                  validClass: "is-valid",
+              });
+          });
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $('button#lead_mo').click(function(){                
+                var leade = document.getElementById('lead-mo');
+                var formData = new FormData(leade);
+            	formData.append('telefono', String(iti.getNumber(crossOriginIsolated)));
+                $.ajax({
+                url: 'http://143.110.230.150/api/lead',
+                type: 'POST',
+                dataType: 'json',
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function(data){
+                    if(data[0]['saved'] == true){
+                        $("#modalExito").modal('show');
+                        console.log(data[0]);
+                        //console.log(data);
+                        console.log(data[0]['fields'])
+                    }else {
+                        $("#modalFracaso").modal('show');
+                        $("#error-alerta").html(data[0]['reason']);
+                        console.log(data[0]['reason']);
+                        console.log(data[0]['fields'])
+
+                    }
+                    
+                    //
+                },
+                error: function(){
+                    $("#modalFracaso").modal('show');
+                    $("#error-alerta").html("El servidor remoto no se pudo contactar, por favor intente más tarde");
+                }
+            });
+
+            });
+
+            
+
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+              $("#lead-mo").validate({
                   debug: true,
                   rules: {
                       nombre : "required",
