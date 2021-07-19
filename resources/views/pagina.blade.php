@@ -912,7 +912,7 @@
                 var formData = new FormData(forma);
             	formData.append('telefono', String(iti.getNumber(crossOriginIsolated)));
                 $.ajax({
-                url: 'http://referidos.test/api/lead',
+                url: 'http://143.110.230.150/api/lead',
                 type: 'POST',
                 dataType: 'json',
                 processData: false,
