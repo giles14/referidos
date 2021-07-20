@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Vox Round';
+    src: local('Vox Round Semi bold'), local('Vox-Round-Semi-bold'),
+        url('VoxRound-Semibold.woff2') format('woff2'),
+        url('VoxRound-Semibold.woff') format('woff'),
+        url('VoxRound-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
