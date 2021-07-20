@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Lead;
 use App\Models\Transaction;
+use App\Repositories\TransactionRepository;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
 {
+    private TransactionRepository $_transactionRepository;
+
+    public function __construct(TransactionRepository $transactionRepository)
+    {
+        $this->_transactionRepository = $transactionRepository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -190,5 +198,3 @@ class LeadController extends Controller
 
     }
 }
-
-/* Añadiendo esto /*
