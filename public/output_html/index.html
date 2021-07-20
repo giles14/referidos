@@ -17,8 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <!-- Inteli -->
-    <link rel="stylesheet" href="{{asset('assets/css/intlTelInput.css')}}">
-    {{-- <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}"> --}}
+    <link rel="stylesheet" href="assets/css/intlTelInput.css">
+    <!-- <link rel="stylesheet" href="assets/css/demo.css"> -->
 
   </head>
   <body>
@@ -34,15 +34,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav justify-content-end justify-content-center">
                 <li class="nav-item active">
-                <a class="nav-link" href="#">Becas <span class="sr-only">(current)</span></a>
+                <a class="nav-link" target="_blank" href="https://www.iexe.edu.mx/becas-2">Becas <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link" target="_blank" href="https://www.iexe.edu.mx/iexe">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Otros Programas</a>
+                <a class="nav-link" target="_blank" href="https://www.iexe.edu.mx/">Otros Programas</a>
                 </li>
-                <button class="boton-top" type="button">Contacta a un asesor
+                <a class="boton-top" href="https://bit.ly/3itPaRg">Contacta a un asesor</a>
+                
             </ul>
             </div>
         </div>
@@ -385,16 +386,7 @@
         .extra-buffer {
             margin-top: 11rem!important;
         }
-        /* .tarjeta input[type="text"] {
-            width: 100%;
-            height: 50px;
-            margin-top: 17px;
-            background: none;
-            border: none;
-            outline: none;
-            font-weight: 600;
-            color: #3B4246;
-        } */
+        
         .tarjeta input[type="text"] {
             width: 88%;
             height: 40px;
@@ -585,14 +577,19 @@
         .mt-9{
             margin-top: 6em;
         }
-        button.boton-top {
+        .boton-top {
             border: none;
             border-radius: 10px;
-            padding: 0px 20px;
+            padding: 5px 20px 0px;
             background: #839DBB;
             color: #fff;
             height: 35px;
         }
+        .boton-top:hover{
+            color:#000;
+            background: aqua;
+        }
+
         button.boton-top:hover {
             background: aqua;
             color: #000;
@@ -825,22 +822,18 @@
             }
         }
     </style>
-        <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="{{asset('assets/js/intlTelInput.js')}}"></script>
+    <script src="assets/js/intlTelInput.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 
     <script>
         var input = document.querySelector("#phone");
         var iti = window.intlTelInput(input, {
           geoIpLookup: function(callback) {
-            $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+            $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
               var countryCode = (resp && resp.country) ? resp.country : "";
               callback(countryCode);
             });
@@ -856,7 +849,7 @@
             var inputmo = document.querySelector("#tel_mo");
             var itin = window.intlTelInput(inputmo, {
               geoIpLookup: function(callback) {
-                $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
                   var countryCode = (resp && resp.country) ? resp.country : "";
                   callback(countryCode);
                 });
