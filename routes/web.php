@@ -17,12 +17,18 @@ Route::get('/', function () {
     return view('pagina');
 });
 
-Route::resource( 'empleados' , EmpleadoController::class );
 
-Route::resource( 'descuentos' , DescuentoController::class );
+Route::resource( 'empleados' , EmpleadoController::class )->middleware('auth');
 
-Route::resource( 'transacciones' , TransactionController::class );
+Route::resource( 'descuentos' , DescuentoController::class )->middleware('auth');
 
-Route::resource( 'leads' , LeadController::class) ;
+Route::resource( 'transacciones' , TransactionController::class )->middleware('auth');
 
-Route::resource( 'descuentosActivos' , DescuentoActivoController::class );
+Route::resource( 'leads' , LeadController::class)->middleware('auth');
+
+Route::resource( 'descuentosActivos' , DescuentoActivoController::class )->middleware('auth');
+
+Auth::routes();
+Auth::routes(['register' => false]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

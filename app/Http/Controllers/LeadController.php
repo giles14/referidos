@@ -88,7 +88,9 @@ class LeadController extends Controller
             'requestVar'=> $request->all(),
             'fields'=> [$request['nombre'] , $request['correo'], $request['telefono'] , $request['programa'] ,  $request['codigo']]
         ];
-        $this->pushCrm($result);
+        
+        $result[]['crm'] = $this->pushCrm($result);
+        
 
         }catch (\Illuminate\Validation\ValidationException $e) {
 
@@ -183,7 +185,11 @@ class LeadController extends Controller
         );
         $context  = stream_context_create($options);
         $result = file_get_contents($url, false, $context);
-        echo $result;
+        
+        if($result){
+            return $result;
+        }
+
         if ($result === FALSE) { 
             echo 'CRM regreso un valor no reconocido';
          }

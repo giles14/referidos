@@ -837,29 +837,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 
     <script>
-        // $("#submitButton").click(function() {
-
-        // //Fetch form to apply custom Bootstrap validation
-        // var form = $("lead")
-        // //alert(form.prop('id')) //test to ensure calling form correctly
-
-        // if (form[0].checkValidity() === false) {
-        //     event.preventDefault()
-        //     event.stopPropagation()
-        // }
-        // form.addClass('was-validated')
-        // });
-
-    </script>
-    <script>
         var input = document.querySelector("#phone");
         var iti = window.intlTelInput(input, {
-          // allowDropdown: false,
-          // autoHideDialCode: false,
-          // autoPlaceholder: "off",
-          // dropdownContainer: document.body,
-          // excludeCountries: ["us"],
-          // formatOnDisplay: false,
           geoIpLookup: function(callback) {
             $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
               var countryCode = (resp && resp.country) ? resp.country : "";
@@ -868,12 +847,7 @@
           },
           hiddenInput: "telefone",
           initialCountry: "auto",
-          // localizedCountries: { 'de': 'Deutschland' },
-          // nationalMode: false,
-          // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-          // placeholderNumberType: "MOBILE",
           preferredCountries: ['mx' , 'ec', 'co', 'us', 'ar' , 'pa' , 'do'],
-          // separateDialCode: true,
           utilsScript: "assets/js/utils.js",
         });
 
@@ -881,12 +855,6 @@
         <script>
             var inputmo = document.querySelector("#tel_mo");
             var itin = window.intlTelInput(inputmo, {
-              // allowDropdown: false,
-              // autoHideDialCode: false,
-              // autoPlaceholder: "off",
-              // dropdownContainer: document.body,
-              // excludeCountries: ["us"],
-              // formatOnDisplay: false,
               geoIpLookup: function(callback) {
                 $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
                   var countryCode = (resp && resp.country) ? resp.country : "";
@@ -894,12 +862,7 @@
                 });
               },
               initialCountry: "auto",
-              // localizedCountries: { 'de': 'Deutschland' },
-              // nationalMode: false,
-              // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-              // placeholderNumberType: "MOBILE",
               preferredCountries: ['mx' , 'ec', 'co', 'us', 'ar' , 'pa' , 'do'],
-              // separateDialCode: true,
               utilsScript: "assets/js/utils.js",
             });
     
@@ -912,7 +875,7 @@
                 var formData = new FormData(forma);
             	formData.append('telefono', String(iti.getNumber(crossOriginIsolated)));
                 $.ajax({
-                url: 'http://referidos.test/api/lead',
+                url: 'http://143.110.230.150/api/lead',
                 type: 'POST',
                 dataType: 'json',
                 processData: false,
@@ -1046,12 +1009,5 @@
     <script>
         AOS.init();
     </script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
