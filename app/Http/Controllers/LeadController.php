@@ -168,7 +168,7 @@ class LeadController extends Controller
         $leadInfo[0]['fields'][3] = 'LSP';
 
         $url = 'https://api.redisoft.dev/Leads/web';
-        $data = array('nombre' => $leadInfo[0]['fields'][0], 'correo' => $leadInfo[0]['fields'][1] , 'telefono' => $leadInfo[0]['fields'][2], 'programa' => $leadInfo[0]['fields'][3] , 'referencia' => 'https://www.iexe.edu.mx/administracion-de-empresas#FormularioPrograma' , 'adicional' => 'landing Page');
+        $data = array('nombre' => $leadInfo[0]['fields'][0], 'correo' => $leadInfo[0]['fields'][1] , 'telefono' => $leadInfo[0]['fields'][2], 'programa' => $leadInfo[0]['fields'][3] , 'referencia' => 'https://www.iexe.edu.mx/administracion-de-empresas#FormularioPrograma' , 'adicional' => 'landing regalo LSP');
         //$data = 'nombre=Nombre de prueba&correo=miCorreodePrueba7@gmail.com&telefono=+522226558877&programa=LAE&referencia=https://www.iexe.edu.mx/administracion-de-empresas#FormularioPrograma&adicional=landing merca';
 
          //$data2 = http_build_query($data);
