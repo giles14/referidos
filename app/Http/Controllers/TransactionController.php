@@ -144,7 +144,7 @@ class TransactionController extends Controller
 
         echo 'Intentando salvar';
 
-        return $folio;
+        Transaction::create($request -> all());
 
     }
 
